@@ -36,6 +36,5 @@ while True: #the while loop will ensure the code continues regardless
         
         res = bin_to_dec(binary) #We call our function
         print(f'Your binary number {num} returns the decimal number {res}')
-        
         break #The while loop closes successfully
 
