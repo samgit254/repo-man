@@ -5,7 +5,7 @@ class NonBinaryError(Exception):
 
 while True: #the while loop will ensure the code continues regardless
     try:
-        #get the input of the binary number being converted to decimal
+        #get the input of the binary number you want converted to decimal
         num = int(input('Type in your binary number: ')) 
         binary = [int(x) for x in str(num)]
         for x in binary:
@@ -15,10 +15,12 @@ while True: #the while loop will ensure the code continues regardless
     except NonBinaryError:
         print('The number is non-binary, input an actual binary number.')
 
-    except Exception: #This exception takes care of other non-integer inputs
+    #This exception takes care of other non-integer inputs like letters and symbols
+    except Exception: 
         print('Invalid input, type in your binary number: ')
 
-    else: #The code proceeds if no error is detected thus far
+    #The code proceeds when no error is raised so far
+    else: 
         def bin_to_dec(binary):
             binary.reverse()
             while binary:
@@ -34,7 +36,9 @@ while True: #the while loop will ensure the code continues regardless
                         
             return dec_num
         
-        res = bin_to_dec(binary) #We call our function
+        #We call our function to convert the binary number input into a decimal number
+        #and print out the results in a statement
+        res = bin_to_dec(binary) 
         print(f'Your binary number {num} returns the decimal number {res}')
         
         break #The while loop closes successfully
