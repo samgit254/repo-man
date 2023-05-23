@@ -3,7 +3,7 @@ class NonBinaryError(Exception):
     pass
 
 
-while True: #the while loop will ensure the code continues regardless
+while True: #the while loop will ensure the code loops through all code correctly
     try:
         #get the input of the binary number you want converted to decimal
         num = int(input('Type in your binary number: ')) 
